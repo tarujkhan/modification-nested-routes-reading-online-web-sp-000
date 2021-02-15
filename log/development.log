@@ -3867,3 +3867,33 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/posts/new" for 71.30.165.255 at 2021-02-15 18:55:12 +0000
+Cannot render console from 71.30.165.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.4ms)
+  Rendered posts/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/17/edit" for 71.30.165.255 at 2021-02-15 18:55:26 +0000
+Cannot render console from 71.30.165.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.0ms)
+  Rendered posts/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/4/posts/new" for 71.30.165.255 at 2021-02-15 19:03:39 +0000
+Cannot render console from 71.30.165.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.9ms)
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
