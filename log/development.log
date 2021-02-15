@@ -3897,3 +3897,7 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/authors/4/posts/new" for 71.30.165.255 at 2021-02-15 19:06:39 +0000
+Cannot render console from 71.30.165.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
