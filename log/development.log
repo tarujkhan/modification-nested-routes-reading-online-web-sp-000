@@ -4004,3 +4004,26 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/authors/4/posts/19/edit" for 71.30.165.255 at 2021-02-15 19:53:21 +0000
+Cannot render console from 71.30.165.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"4", "id"=>"19"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.1ms)
+  Rendered posts/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/19" for 71.30.165.255 at 2021-02-15 19:53:24 +0000
+Cannot render console from 71.30.165.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5BSIC9HoB8+7jhslv4Fiu9Qxl62gfyUQno6SHhhPFdGp2Kj0L6iPAW1UNaUORLnO7uppaiHBv679eJH0p82f0g==", "post"=>{"title"=>"J", "author_id"=>"4", "description"=>"jk"}, "commit"=>"Update Post", "id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["description", "jk"], ["updated_at", "2021-02-15 19:53:24.584987"], ["id", 19]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://157.230.220.151:34912/posts/19
+Completed 302 Found in 8ms (ActiveRecord: 5.2ms)
+
+
