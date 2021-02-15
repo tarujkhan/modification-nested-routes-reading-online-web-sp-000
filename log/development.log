@@ -3961,3 +3961,35 @@ Processing by AuthorsController#show as HTML
 Completed 200 OK in 29ms (Views: 20.1ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/posts/18" for 71.30.165.255 at 2021-02-15 19:52:55 +0000
+Cannot render console from 71.30.165.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/4/posts/new" for 71.30.165.255 at 2021-02-15 19:52:59 +0000
+Cannot render console from 71.30.165.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.3ms)
+  Rendered posts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 71.30.165.255 at 2021-02-15 19:53:02 +0000
+Cannot render console from 71.30.165.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xyP5eDMh9x+aBuaf2whpIAHZY7hgieO+qvu6t+DhqWCK79mHzWF/0UzcyB9qzbJVOwKdf+E3eQDJDbldX2MjYw==", "post"=>{"title"=>"j", "author_id"=>"4", "description"=>"j"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "J"], ["description", "j"], ["created_at", "2021-02-15 19:53:02.951630"], ["updated_at", "2021-02-15 19:53:02.951630"], ["author_id", 4]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://157.230.220.151:34912/posts/19
+Completed 302 Found in 9ms (ActiveRecord: 6.2ms)
+
+
