@@ -44,6 +44,7 @@ class PostsController < ApplicationController
     else
     @post = Post.find(params[:id])
   end
+end 
 
   private
 
