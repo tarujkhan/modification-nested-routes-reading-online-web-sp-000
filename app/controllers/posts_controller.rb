@@ -35,6 +35,7 @@ class PostsController < ApplicationController
   def edit
     if params[:author_id]
       author = Author.find_by(id: params[:author_id])
+      if author.nil?
     @post = Post.find(params[:id])
   end
 
